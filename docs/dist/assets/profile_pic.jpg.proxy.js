@@ -1,0 +1,1 @@
+export default "/dist/assets/profile_pic.jpg";

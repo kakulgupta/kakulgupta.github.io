@@ -1,38 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import profilePic from './assets/profile_pic.jpg';
+import { Link } from './components/Link';
 
 function App() {
-  // Create the count state.
-  const [count, setCount] = useState(0);
-  // Create the counter (+1 every second).
-  useEffect(() => {
-    const timer = setTimeout(() => setCount(count + 1), 1000);
-    return () => clearTimeout(timer);
-  }, [count, setCount]);
   // Return the App component.
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          Page has been open for <code>{count}</code> seconds.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <main className="p-20">
+      <section className="flex flex-wrap">
+        <div className="w-60">
+          <img className="rounded-full ring-8 ring-green-700 ring-opacity-50" src={profilePic} alt="Profile Kakul Gupta" />
+        </div>
+        <div className="pl-16">
+          <p className="text-6xl">
+            Hi! I'm Kakul Gupta
+          </p>
+          <p>
+            Fullstack developer
+          </p>
+        </div>
+      </section>
+      <section className="flex flex-wrap justify-center">
+        <Link href="https://github.com/kakulgupta/" name="Github" />
+        <Link href="mailto:kakul.gupta009@gmail.com" name="Email" />
+        <Link href="https://linkedin.com/in/kakul-gupta/" name="LinkedIn" />
+        <Link href="https://twitter.com/kakul009" name="Twitter" />
+      </section>
+    </main>
   );
 }
 
