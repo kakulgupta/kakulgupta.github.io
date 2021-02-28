@@ -9,3 +9,4 @@ ReactDOM.render(/* @__PURE__ */ React.createElement(React.StrictMode, null, /* @
 if (undefined /* [snowpack] import.meta.hot */ ) {
   undefined /* [snowpack] import.meta.hot */ .accept();
 }
+
